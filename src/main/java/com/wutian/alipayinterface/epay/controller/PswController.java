@@ -43,7 +43,10 @@ public class PswController {
         //通知地址
         String notify_url = "http://localhost:8888/order/notify";
         //支付后同步跳转地址
-        String return_url = "http://localhost:8888/Psw/success";
+//        //本地测试：
+//        String return_url = "http://localhost:8888/Psw/success";
+        //线上地址：
+        String return_url = "http://59.110.227.82:8888/Psw/success";
 
         //参数有中文则需要URL编码
         String url = "https://api.xiuxiu888.com/creat_order?" +
