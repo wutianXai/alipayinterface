@@ -73,7 +73,7 @@ public class OrderController {
 
         String param=(String)request.getParameter("param");
         //通知地址
-        String notify_url="http://localhost:8080/order/notify";
+        String notify_url="http://localhost:8888/order/notify";
         //支付后同步跳转地址
         String return_url="";
 
