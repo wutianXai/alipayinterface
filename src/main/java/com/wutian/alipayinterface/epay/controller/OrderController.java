@@ -1,5 +1,6 @@
 package com.wutian.alipayinterface.epay.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.wutian.alipayinterface.epay.model.AlipayBean;
 import com.wutian.alipayinterface.epay.imp.PayService;
 import jdk.nashorn.internal.ir.RuntimeNode;
@@ -21,22 +22,18 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
-/**
- * 订单接口
- *
- * @author Louis
- * @date Dec 12, 2018
- * 阿里支付
- * @throws AlipayApiException
- */
 
 @RestController()
 @RequestMapping("order")
 public class OrderController {
     private static final Logger LOG = LoggerFactory.getLogger(OrderController.class);
 
+    private final PayService payService;
+
     @Autowired
-    private PayService payService;
+    public OrderController(PayService payService) {
+        this.payService = payService;
+    }
 
 
     @PostMapping(value = "alipay")
@@ -64,14 +61,14 @@ public class OrderController {
         String codepay_id ="449743" ;
 
         //表单提交的价格
-        String price=(String) request.getParameter("price");
+        String price= request.getParameter("price");
         //支付类型  1：支付宝 2：QQ钱包 3：微信
-        String type=(String)request.getParameter("type");
+        String type=request.getParameter("type");
         //支付人的唯一标识
-        String pay_id=(String)request.getParameter("pay_id");
+        String pay_id=request.getParameter("pay_id");
         //自定义一些参数 支付后返回
 
-        String param=(String)request.getParameter("param");
+        String param=request.getParameter("param");
         //通知地址
         String notify_url="http://localhost:8888/order/notify";
         //支付后同步跳转地址
@@ -98,7 +95,7 @@ public class OrderController {
     public void notify(HttpServletRequest request){
         LOG.info("receive msg!");
         Map requestParams = request.getParameterMap();
-        LOG.info(request.toString());
+        LOG.info(JSON.toJSONString(requestParams));
 
 //        /**
 //         *验证通知 处理自己的业务

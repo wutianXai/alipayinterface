@@ -1,4 +1,4 @@
-
+<%@ page pageEncoding="utf-8"%>
 <html>
 <head>
     <meta name="keywords" content="">
@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>
-        充值
+        密码
     </title>
     <style>
 
@@ -27,111 +27,25 @@
             border-bottom-color: #b8d4ea;
             box-shadow: 0 0 5px #b9d4e9;
         }
-
-        .button {
-            color: #666;
-            background-color: #EEE;
-            border-color: #EEE;
-            font-weight: 300;
-            font-size: 16px;
-            font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-            text-decoration: none;
-            text-align: center;
-            line-height: 40px;
-            height: 40px;
-            padding: 0 40px;
-            margin: 0;
-            display: inline-block;
-            appearance: none;
-            cursor: pointer;
-            border: none;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            -webkit-transition-property: all;
-            transition-property: all;
-            -webkit-transition-duration: .3s;
-            transition-duration: .3s;
-        }
-
-        .button-primary {
-            background-color: #1B9AF7;
-            border-color: #1B9AF7;
-            color: #FFF;
-        }
-
-        .button-primary:visited:visited {
-            color: #FFF;
-        }
-
-        .button-primary:hover, .button-primary:focus
-        {
-            background-color: #4cb0f9;
-            border-color: #4cb0f9;
-            color: #FFF;
-        }
-
-        .button-pill {
-            border-radius: 200px;
-        }
-
-        .alipay_select {
-            width: 120px;
-            background: url(http://codepay.fateqq.com/img/alipay.jpg) no-repeat 14px 0;
-        }
-
-        .qqpay_select {
-            width: 130px;
-            background: url(http://codepay.fateqq.com/img/qqpay.jpg) no-repeat 14px 0;
-        }
-
-        .wechat_select {
-            width: 120px;
-            background: url(http://codepay.fateqq.com/img/weixin.jpg) no-repeat 16px 0;
-
-        }
-
-        .type_select {
-            float: left;
-            padding: 1px;
-            margin: 5px 5px 0px 0px;
-
-            border: 1px solid #80C5FF;
-            color: #0061F3;
-            font-size: 13px;
-            padding: 5px;
-            margin-left: 0px;
-            float: left;
-            padding-left: 2px;
-            padding-right: 20px;
-            padding-top: 14px;
-            height: 20px;
-        }
     </style>
 </head>
 <body>
-<form name="form1" id="form1" method="get" action="codepay">
+
     <div>
         <table width="550" border="0" align="center" cellpadding="8" cellspacing="1" bgcolor="#ffffff">
             <tbody>
             <tr>
                 <td colspan="2">
-                    <div align="center"><strong>资源密码</strong></div>
+                    <div align="center"><strong>test-zip 's password is:</strong></div>
                 </td>
             </tr>
-
-
             <tr>
                 <td><label>
-                    <input type="submit"  id="Submit" class="button button-pill button-primary"
-                           value="123">
-
-                </label></td>
+                    <input class="input_text" type="text">123</label></td>
             </tr>
             </tbody>
         </table>
     </div>
-</form>
 <script src="http://codepay.fateqq.com/js/jquery-1.10.2.min.js"></script>
 </body>
 </html>
